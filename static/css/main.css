@@ -173,16 +173,25 @@ button:hover,
 
 /*** Home page styles ***/
 .home-header-wrap {
+  background-image: url(/static/img/golf-sunset.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: #3c1d78;
+  height: 90vh;
+  overflow: auto;
   color: #fff;
   padding-bottom: 2rem;
 }
 .home-header-wrap h1 {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 300;
   color: rgba(255,255,255,.9);
-  margin-top: 3.5rem;
-  margin-bottom: 1rem;
+  margin-top: 8rem;
+}
+.home-header-wrap .hero-plus {
+  font-size: 2.5rem;
+  font-weight: 100;
 }
 .home-header-wrap p {
   color: rgba(255,255,255,.8);
