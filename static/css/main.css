@@ -44,7 +44,6 @@ button:hover,
   background-size: auto;
   background-position: 0% 0%;
   background-repeat: repeat-x;
-  margin-bottom: 2rem;
 }
 .home-header-wrap .navbar {
   background-color: transparent;
@@ -236,6 +235,7 @@ button:hover,
 h1.page-header {
   font-weight: 800;
   font-size: 1.8rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 h2.section-header {
