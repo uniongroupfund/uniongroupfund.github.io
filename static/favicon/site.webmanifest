@@ -1,15 +1,10 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "UGF",
+    "short_name": "UGF",
     "icons": [
         {
-            "src": "/static/img/favicon/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/static/img/favicon/android-chrome-512x512.png",
-            "sizes": "512x512",
+            "src": "/static/favicon/android-chrome-144x144.png",
+            "sizes": "144x144",
             "type": "image/png"
         }
     ],
