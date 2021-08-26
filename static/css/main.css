@@ -1,11 +1,20 @@
 /*** Elements ***/
 body {
-  background-color: #f8f8f8;
-  background-image:url('../img/body-bg.png');
-  background-size: 3820px auto;
-  background-position: top center;
-  background-repeat: no-repeat;
-  color: #46395b;
+  background-image: none;
+  background-color: #fff;
+  background-size: auto;
+  font-family: "Poppins",sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #232323;
+  text-align: left;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body main {
+    flex-grow: 1;
+    height: 100%;
 }
 span[data-toggle="popover"] {
   color: #ccc;
@@ -26,20 +35,25 @@ button:hover,
   cursor: pointer !important;
 }
 .btn-primary {
-  background-color: #0bb8be;
-  border-color: #0bb8be;
+  background-color: #da3458;
+  border-color: #da3458;
 }
 .btn-primary:hover,
 .btn-primary:active {
-  background-color: #12adb3;
-  border-color: #12adb3;
+  background-color: #da3458;
+  border-color: #da3458;
+}
+.btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+  background-color: #da3458;
+  border-color: #da3458;
 }
 .btn-outline-primary {
-  border-color: #0bb8be;
+  border-color: #da3458;
 }
 /*** Navbar ***/
 .navbar {
-  background-color: #3c1d78;
+  background-color: #232323;
   background-image: none;
   background-size: auto;
   background-position: 0% 0%;
@@ -59,11 +73,47 @@ button:hover,
 .navbar-dark .navbar-toggler {
     border-color: transparent;
 }
+.navbar-toggler-icon {
+  background-color: #232323;
+}
 .navbar-brand {
     font-weight: 800;
 }
 .navbar-brand img {
     max-height: 40px;
+}
+.navbar-alert {
+  background-color: #173d7b;
+}
+.navbar-alert a {
+  color: #008ef4;
+}
+.navbar-alert .highlight {
+  color: #FFD744;
+  font-weight: bold;
+}
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+.navbar-dark .navbar-nav .nav-link.btn-primary {
+    color: #fff;
+}
+
+
+.home .navbar-dark .navbar-brand,
+.home .navbar-dark .navbar-nav .nav-link {
+    color: #232323;
+}
+.home .navbar-dark .navbar-brand,
+.home .navbar-dark .navbar-brand:focus, .home .navbar-dark .navbar-brand:hover,
+.home .navbar-dark .navbar-nav .nav-link:focus, .home .navbar-dark .navbar-nav .nav-link:hover {
+    color: #232323;
 }
 
 /*** Wizard Nav ***/
@@ -172,28 +222,19 @@ button:hover,
 
 /*** Home page styles ***/
 .home-header-wrap {
-  background-image: url(/static/img/golf-sunset.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #3c1d78;
+  background-color: #f9f9f9;
   height: 90vh;
   overflow: auto;
-  color: #fff;
   padding-bottom: 2rem;
 }
 .home-header-wrap h1 {
-  font-size: 3.5rem;
-  font-weight: 300;
-  color: rgba(255,255,255,.9);
+  font-size: 2.5rem;
+  font-weight: 900;
   margin-top: 8rem;
 }
 .home-header-wrap .hero-plus {
   font-size: 2.5rem;
   font-weight: 100;
-}
-.home-header-wrap p {
-  color: rgba(255,255,255,.8);
 }
 .home-header-cta {
   margin-top: 2.5rem;
@@ -203,9 +244,6 @@ button:hover,
   font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
-}
-.home-header-wrap .irs-logo {
-  margin-bottom: 2.5rem;
 }
 .section-header-icon {
   font-size: 3rem;
@@ -224,6 +262,9 @@ button:hover,
 }
 
 /*** Page Elements ***/
+.section {
+  padding: 7rem 0;
+}
 .container-top {
   margin-top: 2rem;
 }
@@ -244,11 +285,17 @@ h2.section-header {
   margin-bottom: 1.9rem;
 }
 
-#id_vin,
-#id_vin_original,
-#id_vin_corrected,
-.vin {
-  text-transform: uppercase;
+.media-steps .media {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e8f4fd;
+}
+.media-steps img {
+  width: 64px;
+  height: 64px;
+}
+.media-steps h5 {
+  color: #000;
 }
 
 /*** Forms ***/
@@ -283,11 +330,6 @@ label[for=id_captcha] {
   margin: 0 auto;
 }
 
-/*** Credit Vehicle Form ***/
-.form-vehicle-credit .buyer-details {
-  display: none;
-}
-
 /*** Cards ***/
 .card {
   margin-bottom: 1.5rem;
@@ -319,6 +361,20 @@ label[for=id_captcha] {
   background-position: center;
   background-size: cover;
 }
+.bg-primary {
+  background-color: #b3e0ff !important;
+}
+.bg-secondary {
+  background-color: #232323 !important;
+  color: #fff;
+}
+.bg-secondary a {
+  color: #fff;
+  text-decoration: underline;
+}
+.bg-gray {
+  background: #f5f5f5 !important;
+}
 
 /*** Payment ***/
 .order-total {
@@ -327,41 +383,8 @@ label[for=id_captcha] {
 
 /*** Footer ***/
 .footer .container {
-  margin-top: 2rem;
+  margin-top: 0;
   padding-bottom: 1rem;
-}
-
-/*** Scratch Off ***/
-#scratch {
-  position: relative;
-  display: inline-block;
-  font-size: 0;
-}
-#scratch img {
-  width: 100%;
-  max-width: 916px;
-  height: auto;
-}
-#scratch canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  cursor: pointer;
-  will-change: transform;
-  transform: translate3d(0,0,0);
-  -ms-touch-action: none;
-  -webkit-touch-action: none;
-  -moz-touch-action: none;
-  touch-action: none;
-  transition: opacity 500ms ease-out 0ms, height 0ms linear 500ms;
-}
-#scratch.revealed canvas {
-  opacity: 0;
-  height: 0;
 }
 
 /*** Box ***/
@@ -377,43 +400,22 @@ label[for=id_captcha] {
   margin-bottom: 1rem;
 }
 
-/*** IRS Payment Page ***/
-.payment-details {
-  display: none;
-}
-#select_payment_type {
-  display: block;
-}
-.payment-consent-efw-group {
-  font-size: 1.2rem;
-  margin-bottom: 0;
-  margin-top: 40px;
-}
-.payment-consent-efw-group label {
-  font-weight: bold;
-  margin-bottom: 0;
-}
-.payment-consent-eftps-group label {
-  font-weight: bold;
-}
-.payment-consent-check-group label {
-  font-weight: bold;
-}
-
-/*** Third Party Designee Page ***/
-.designee-details {
-  display: none;
-}
-
 /*** Flatpages ***/
 .flatpage-img-header {
   margin-top: -2rem;
 }
 
+/*** Blockquote ***/
+.bq-source-title {
+  font-size: 80%;
+  font-style: italic;
+  color: #868e96;
+}
+
 /*** Responsive styles ***/
 @media (max-width: 991px) {
   .home-header-wrap h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 }
 
